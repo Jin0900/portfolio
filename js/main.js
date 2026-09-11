@@ -4,6 +4,64 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* ---------- 0. 流动网格背景 ---------- */
+  const canvas = document.getElementById('bgGrid');
+  if (canvas) {
+    const ctx = canvas.getContext('2d');
+    let W, H, mouseX = -9999, mouseY = -9999;
+    const GRID = 60; // 网格间距
+
+    const resize = () => {
+      W = canvas.width = window.innerWidth * devicePixelRatio;
+      H = canvas.height = window.innerHeight * devicePixelRatio;
+      canvas.style.width = window.innerWidth + 'px';
+      canvas.style.height = window.innerHeight + 'px';
+      ctx.scale(devicePixelRatio, devicePixelRatio);
+    };
+    resize();
+    window.addEventListener('resize', resize);
+
+    window.addEventListener('mousemove', e => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+    window.addEventListener('mouseleave', () => { mouseX = -9999; mouseY = -9999; });
+
+    const draw = () => {
+      ctx.clearRect(0, 0, W, H);
+      const cols = Math.ceil(window.innerWidth / GRID) + 1;
+      const rows = Math.ceil(window.innerHeight / GRID) + 1;
+
+      for (let i = 0; i < cols; i++) {
+        for (let j = 0; j < rows; j++) {
+          const x = i * GRID;
+          const y = j * GRID;
+          const dx = x - mouseX;
+          const dy = y - mouseY;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          const maxDist = 200;
+
+          if (dist < maxDist) {
+            // 鼠标附近的点：橙色，更亮更大
+            const intensity = 1 - dist / maxDist;
+            ctx.fillStyle = `rgba(255, 106, 0, ${intensity * 0.6})`;
+            ctx.beginPath();
+            ctx.arc(x, y, 1.5 + intensity * 2.5, 0, Math.PI * 2);
+            ctx.fill();
+          } else {
+            // 普通点：暗灰色
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.06)';
+            ctx.beginPath();
+            ctx.arc(x, y, 1, 0, Math.PI * 2);
+            ctx.fill();
+          }
+        }
+      }
+      requestAnimationFrame(draw);
+    };
+    draw();
+  }
+
   /* ---------- 1. 导航栏：滚动状态 ---------- */
   const nav = document.querySelector('.nav');
   const onScroll = () => {
