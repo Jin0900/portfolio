@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — He Zheng Portfolio</title>
+  <meta name="description" content="联系何峥：AIGC视觉创作者 / AI应用探索者。" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- 导航 -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html"><span class="logo-mark">HZ</span>HE ZHENG</a>
+      <nav class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="work.html">WORK</a>
+        <a href="about.html">ABOUT</a>
+        <a href="contact.html" class="active">CONTACT</a>
+      </nav>
+      <button class="nav-toggle" aria-label="打开菜单"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- 页面头 -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="crumb fade-up" style="--d:.1s">/ CONTACT — 联系我</span>
+      <h1 class="fade-up" style="--d:.2s">LET'S <span class="text-gradient">CONNECT</span></h1>
+      <p class="fade-up" style="--d:.35s">如果你对 AI 视觉创作、AI 应用或数字产品合作有兴趣，欢迎通过以下方式联系我。</p>
+    </div>
+  </section>
+
+  <!-- 主体 -->
+  <section class="section">
+    <div class="container contact-grid">
+
+      <!-- 左：联系信息 -->
+      <div class="reveal">
+        <div class="section-head" style="margin-bottom:36px;">
+          <span class="section-tag">Contact Info</span>
+          <h2 class="section-title" style="font-size:clamp(26px,3vw,36px);">何峥 <span style="color:var(--dim);font-size:16px;font-family:var(--font-mono);letter-spacing:.1em;">HE ZHENG</span></h2>
+        </div>
+
+        <a class="contact-item" href="mailto:452497328@qq.com">
+          <span class="ico">✉️</span>
+          <span class="info">
+            <span class="label">Email · 邮箱</span>
+            <span class="val">452497328@qq.com</span>
+          </span>
+        </a>
+
+        <a class="contact-item" href="#" onclick="return false;">
+          <span class="ico">🐙</span>
+          <span class="info">
+            <span class="label">GitHub</span>
+            <span class="val">github.com/Jin0900/Portfolio-Website</span>
+          </span>
+        </a>
+
+        <div class="contact-item">
+          <span class="ico">📍</span>
+          <span class="info">
+            <span class="label">Location · 所在地</span>
+            <span class="val">China</span>
+          </span>
+        </div>
+
+        <div class="contact-item">
+          <span class="ico">💼</span>
+          <span class="info">
+            <span class="label">Focus · 方向</span>
+            <span class="val">AIGC视觉创作 / AI应用 / 数字产品设计</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- 右：留言表单 -->
+      <form class="contact-form reveal" style="--d:.15s;">
+        <div class="form-field">
+          <label for="name">你的名字 / NAME</label>
+          <input id="name" type="text" placeholder="怎么称呼你？" required />
+        </div>
+        <div class="form-field">
+          <label for="email">邮箱地址 / EMAIL</label>
+          <input id="email" type="email" placeholder="you@example.com" required />
+        </div>
+        <div class="form-field">
+          <label for="subject">主题 / SUBJECT</label>
+          <input id="subject" type="text" placeholder="想聊些什么？" />
+        </div>
+        <div class="form-field">
+          <label for="message">留言内容 / MESSAGE</label>
+          <textarea id="message" placeholder="写下你的想法、合作意向或建议…" required></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit" style="width:100%;justify-content:center;">发送留言 <span class="arrow">→</span></button>
+        <div class="form-toast">✓ 留言已发送（演示状态），感谢你的联系！</div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <a class="logo" href="index.html"><span class="logo-mark">HZ</span>HE ZHENG</a>
+      <div class="footer-links">
+        <a href="work.html">WORK</a>
+        <a href="about.html">ABOUT</a>
+        <a href="contact.html">CONTACT</a>
+      </div>
+      <div class="copy">© 2026 HE ZHENG PORTFOLIO</div>
+    </div>
+  </footer>
+
+  <button class="back-top" aria-label="回到顶部">↑</button>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+# 私人笔记与中间文档
+3问题.txt
+AI图片生成工具_最终PRD.txt
+个人定位.txt
+初版 PRD.txt
+网站基础架构.png
+
+# 原始素材文件夹（网站使用 assets/ 中的优化版）
+Core Project Materiales/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak

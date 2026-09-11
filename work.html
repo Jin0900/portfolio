@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work — He Zheng Portfolio</title>
+  <meta name="description" content="何峥的全部项目作品：AI应用、AIGC视觉、网页产品。" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- 导航 -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html"><span class="logo-mark">HZ</span>HE ZHENG</a>
+      <nav class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="work.html" class="active">WORK</a>
+        <a href="about.html">ABOUT</a>
+        <a href="contact.html">CONTACT</a>
+      </nav>
+      <button class="nav-toggle" aria-label="打开菜单"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- 页面头 -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="crumb fade-up" style="--d:.1s">/ WORK — 项目作品</span>
+      <h1 class="fade-up" style="--d:.2s">ALL <span class="text-gradient">PROJECTS</span></h1>
+      <p class="fade-up" style="--d:.35s">三个核心项目与完整视觉产出，覆盖 AI 应用开发、AIGC 视觉创作与数字产品设计。</p>
+    </div>
+  </section>
+
+  <!-- 项目列表 -->
+  <section class="section" style="padding-top: 70px;">
+    <div class="container">
+
+      <!-- 分类筛选 -->
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-filter="all">全部 ALL</button>
+        <button class="filter-btn" data-filter="ai-app">AI Application</button>
+        <button class="filter-btn" data-filter="aigc">AIGC Visual</button>
+        <button class="filter-btn" data-filter="web-product">Web Product</button>
+        <button class="filter-btn" data-filter="experiment">AI Experiment</button>
+      </div>
+
+      <div class="work-grid">
+        <!-- 项目1：荒野求生日志 -->
+        <a class="work-card work-item wide showing reveal" data-category="web-product" href="project-survival-log.html">
+          <div class="work-thumb">
+            <span class="work-cat">WEB PRODUCT</span>
+            <img src="assets/survival/cover.png" alt="荒野求生日志 - 封面" />
+          </div>
+          <div class="work-body">
+            <h3>荒野求生日志 <em style="font-style:normal;color:var(--dim);font-size:14px;">Wilderness Survival Log</em></h3>
+            <p>网页互动生存游戏 · 通过事件选择、状态变化和时间推进机制，让玩家体验模拟生存过程。体现产品设计、UI设计、网页开发与交互逻辑。</p>
+            <span class="work-link">查看详情 <span class="arrow">→</span></span>
+          </div>
+        </a>
+
+        <!-- 项目2：AI生图网页 -->
+        <a class="work-card work-item showing reveal" style="--d:.1s" data-category="ai-app" href="project-ai-image.html">
+          <div class="work-thumb">
+            <span class="work-cat">AI APPLICATION</span>
+            <img src="assets/ai-image/sync-gen.png" alt="AI生图网页 - 同步生图界面" />
+          </div>
+          <div class="work-body">
+            <h3>AI生图网页</h3>
+            <p>AI应用网页 / 智能工具应用 · 调用 AI 图像生成模型 API，支持同步生成、异步任务处理与人物模板快速填充。</p>
+            <span class="work-link">查看详情 <span class="arrow">→</span></span>
+          </div>
+        </a>
+
+        <!-- 项目3：ComfyUI电商产品生成 -->
+        <a class="work-card work-item showing reveal" style="--d:.18s" data-category="aigc" href="project-comfyui.html">
+          <div class="work-thumb">
+            <span class="work-cat">AIGC VISUAL</span>
+            <img src="assets/comfyui/headphone.png" alt="ComfyUI电商产品生成 - 耳机主图" />
+          </div>
+          <div class="work-body">
+            <h3>ComfyUI电商产品生成</h3>
+            <p>AI视觉设计 / AIGC应用探索 · 利用 ComfyUI 搭建工作流，生成电商级产品主图与大促海报。</p>
+            <span class="work-link">查看详情 <span class="arrow">→</span></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="empty-note">
+        <p style="font-size:17px;margin-bottom:8px;">AI Experiment 方向的项目正在筹备中</p>
+        <p style="font-size:14px;">更多 AI 工具实验与在线 Demo 将陆续上线。</p>
+      </div>
+
+      <!-- AI生图网页 · 产出展示 -->
+      <div class="work-item showing" data-category="ai-app" style="margin-top: 110px;">
+        <div class="section-head reveal">
+          <span class="section-tag">AI Application · 02</span>
+          <h2 class="section-title" style="font-size: clamp(24px, 3vw, 34px);">AI生图网页 — 界面与生成结果</h2>
+          <p class="section-sub">同步 / 异步两种生成模式：同步即时返回结果，异步通过任务轮询获取生成图片。</p>
+        </div>
+        <div class="img-duo reveal">
+          <figure><img src="assets/ai-image/sync-image.png" alt="同步生图结果示例" /><figcaption>同步模式 · 生成结果</figcaption></figure>
+          <figure><img src="assets/ai-image/async-image.png" alt="异步生图结果示例" /><figcaption>异步模式 · 生成结果</figcaption></figure>
+        </div>
+        <div class="img-duo reveal">
+          <figure><img src="assets/ai-image/async-gen.png" alt="异步生图任务界面" /><figcaption>异步生图 · 任务界面</figcaption></figure>
+          <figure><img src="assets/ai-image/home.png" alt="AI生图网页首页" /><figcaption>平台首页 · 品牌展示</figcaption></figure>
+        </div>
+      </div>
+
+      <!-- ComfyUI · 产出展示 -->
+      <div class="work-item showing" data-category="aigc" style="margin-top: 110px;">
+        <div class="section-head reveal">
+          <span class="section-tag">AIGC Visual · 03</span>
+          <h2 class="section-title" style="font-size: clamp(24px, 3vw, 34px);">ComfyUI电商产品生成 — 视觉产出</h2>
+          <p class="section-sub">Stable Diffusion + ControlNet 工作流：保持产品结构，控制场景与光线，输出商业摄影级素材。</p>
+        </div>
+        <div class="work-grid reveal" style="grid-template-columns: repeat(3, 1fr);">
+          <figure class="img-single" style="margin:0;"><img src="assets/comfyui/serum.png" alt="护肤精华电商主图" /><figcaption>护肤精华 · 商品主图</figcaption></figure>
+          <figure class="img-single" style="margin:0;"><img src="assets/comfyui/cream.png" alt="面霜电商主图" /><figcaption>面霜 · 商品主图</figcaption></figure>
+          <figure class="img-single" style="margin:0;"><img src="assets/comfyui/headphone.png" alt="耳机电商主图" /><figcaption>耳机 · 商品主图</figcaption></figure>
+          <figure class="img-single" style="margin:0;"><img src="assets/comfyui/sneaker.png" alt="运动鞋电商主图" /><figcaption>运动鞋 · 商品主图</figcaption></figure>
+          <figure class="img-single" style="margin:0;"><img src="assets/comfyui/coffee.png" alt="咖啡电商主图" /><figcaption>咖啡 · 商品主图</figcaption></figure>
+          <figure class="img-single" style="margin:0;"><img src="assets/comfyui/promo-168.png" alt="1688大促海报" /><figcaption>1688 · 大促海报</figcaption></figure>
+        </div>
+        <figure class="img-single reveal">
+          <img src="assets/comfyui/promo-1212.png" alt="双12大促海报" style="max-width:720px;margin:0 auto;" />
+          <figcaption>双12 · 大促海报</figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <div class="container reveal">
+      <h2>想看项目的<span class="text-gradient">完整故事</span>？</h2>
+      <p>从《荒野求生日志》了解我如何完成一次完整的数字产品设计。</p>
+      <a class="btn btn-primary" href="project-survival-log.html">阅读项目详情 <span class="arrow">→</span></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <a class="logo" href="index.html"><span class="logo-mark">HZ</span>HE ZHENG</a>
+      <div class="footer-links">
+        <a href="work.html">WORK</a>
+        <a href="about.html">ABOUT</a>
+        <a href="contact.html">CONTACT</a>
+      </div>
+      <div class="copy">© 2026 HE ZHENG PORTFOLIO</div>
+    </div>
+  </footer>
+
+  <button class="back-top" aria-label="回到顶部">↑</button>
+  <script src="js/main.js"></script>
+</body>
+</html>

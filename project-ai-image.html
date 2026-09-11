@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI生图网页 — 项目详情 | He Zheng Portfolio</title>
+  <meta name="description" content="AI生图网页：参数化配置自动生成Prompt，调用阿里云百炼与Apimart双AI平台，支持同步 / 异步双模式出图的前后端分离AI应用复盘。" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- 导航 -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html"><span class="logo-mark">HZ</span>HE ZHENG</a>
+      <nav class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="work.html" class="active">WORK</a>
+        <a href="about.html">ABOUT</a>
+        <a href="contact.html">CONTACT</a>
+      </nav>
+      <button class="nav-toggle" aria-label="打开菜单"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- 项目标题区 -->
+  <section class="project-hero">
+    <div class="container">
+      <span class="crumb fade-up" style="--d:.1s"><a href="work.html" style="color:inherit;">WORK</a> / PROJECT 02</span>
+      <h1 class="fade-up" style="--d:.2s">AI生图<span class="text-gradient">网页</span></h1>
+      <p class="fade-up" style="color:var(--muted);font-size:15px;letter-spacing:.08em;margin-top:10px;font-family:var(--font-mono);" >AI IMAGE GENERATION WEB</p>
+      <div class="tags fade-up" style="--d:.3s">
+        <span>AI 应用网页</span>
+        <span>参数化 Prompt 生成</span>
+        <span>同步 / 异步双模式</span>
+        <span>Node.js · Express</span>
+      </div>
+      <p class="fade-up" style="--d:.4s;color:var(--muted);max-width:720px;font-size:17px;">
+        一款面向游戏开发者与插画师的 AI 辅助设计工具：通过参数化配置自动生成结构化 Prompt，调用真实 AI 平台完成图片生成，支持同步与异步双模式出图。
+      </p>
+
+      <dl class="project-meta fade-up" style="--d:.5s">
+        <div><dt>我的角色</dt><dd>产品 / 前后端 / AI 接口联调</dd></div>
+        <div><dt>项目类型</dt><dd>AI 应用 · 智能工具</dd></div>
+        <div><dt>使用工具</dt><dd>HTML · JS · Node.js · Express · AI API · TRAE</dd></div>
+        <div><dt>项目周期</dt><dd>2026 · 个人项目</dd></div>
+      </dl>
+
+      <div class="project-cover fade-up" style="--d:.6s">
+        <img src="assets/ai-image/home.png" alt="AI生图网页 - 项目封面" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 详情主体 -->
+  <section class="section" style="padding-top: 20px;">
+    <div class="container project-layout">
+
+      <!-- 侧边目录 -->
+      <aside class="toc">
+        <div class="toc-title">目录 / CONTENTS</div>
+        <a href="#background">项目背景</a>
+        <a href="#goal">项目目标</a>
+        <a href="#thinking">设计思路</a>
+        <a href="#flow">功能流程</a>
+        <a href="#process">制作过程</a>
+        <a href="#tech">技术实现</a>
+        <a href="#result">最终成果</a>
+      </aside>
+
+      <div>
+        <!-- 01 项目背景 -->
+        <div class="project-section" id="background">
+          <span class="num">01 / BACKGROUND</span>
+          <h2>项目背景</h2>
+          <p>市面上的 AI 生图工具大多要求用户直接编写 Prompt，门槛高、效果不稳定。我希望做一款<strong>参数优先</strong>的 AI 生图工具：用户只需选择角色人设参数（种族、发型、服饰、画风等），系统自动拼接结构化 Prompt 并调用真实 AI 平台出图，让不会写 Prompt 的人也能稳定产出。</p>
+          <p>这个项目也是我从纯前端页面走向<strong>前后端分离的真实 AI 应用</strong>的一次实践：后端代理 AI 接口、API 密钥不暴露、失败时返回真实错误信息。</p>
+        </div>
+
+        <!-- 02 项目目标 -->
+        <div class="project-section" id="goal">
+          <span class="num">02 / GOAL</span>
+          <h2>项目目标</h2>
+          <p>核心是打通<strong>"参数化配置 → 智能Prompt生成 → AI图片生成"</strong>的完整闭环，具体拆解为：</p>
+          <p>① 15 项人设参数 + 5 套预设模板，一键填充降低使用门槛；② Prompt 自动拼接、实时预览、可手动编辑；③ 同步（阿里云百炼）与异步（Apimart）双 AI 平台分流，兼顾速度与质量；④ 结果可下载、放大预览，生成失败时透明返回真实错误而非伪造图片。</p>
+        </div>
+
+        <!-- 03 设计思路 -->
+        <div class="project-section" id="thinking">
+          <span class="num">03 / THINKING</span>
+          <h2>设计思路</h2>
+          <p>界面采用经典<strong>三栏工作流</strong>布局：左侧人设配置、中间 Prompt 操作、右侧生成结果，"配置 → 生成 → 查看"的动线一眼可见，深色主题统一视觉。</p>
+          <div class="img-single">
+            <img src="assets/ai-image/sync-gen.png" alt="AI生图网页 - 三栏工作流界面" />
+            <figcaption>三栏工作流界面 · 左配置 / 中 Prompt / 右结果</figcaption>
+          </div>
+          <p>设计上坚持两条原则：<strong>参数优先</strong>——用结构化下拉与滑块替代 Prompt 编写；<strong>双模式共存</strong>——同步满足快速预览，异步满足高质量出图，切换模式时比例与分辨率字段自动联动置灰。</p>
+        </div>
+
+        <!-- 04 功能流程 -->
+        <div class="project-section" id="flow">
+          <span class="num">04 / FLOW</span>
+          <h2>功能流程</h2>
+          <p>生成链路由四个环节构成，同步与异步两条链路并行：</p>
+          <div class="flow-steps">
+            <div class="flow-step"><span class="step-num">STEP 01</span><h4>参数配置</h4><p>选择模板或自定义 15 项人设参数</p></div>
+            <div class="flow-step"><span class="step-num">STEP 02</span><h4>Prompt 生成</h4><p>参数实时拼接为结构化 Prompt，可编辑</p></div>
+            <div class="flow-step"><span class="step-num">STEP 03</span><h4>AI 生成</h4><p>同步直连百炼出图 / 异步提交任务轮询</p></div>
+            <div class="flow-step"><span class="step-num">STEP 04</span><h4>结果展示</h4><p>图片展示、下载、放大预览与元信息</p></div>
+          </div>
+          <div class="img-single">
+            <img src="assets/ai-image/async-gen.png" alt="AI生图网页 - 异步任务界面" />
+            <figcaption>异步模式 · 提交任务后每 2 秒轮询，120 秒超时保护</figcaption>
+          </div>
+        </div>
+
+        <!-- 05 制作过程 -->
+        <div class="project-section" id="process">
+          <span class="num">05 / PROCESS</span>
+          <h2>制作过程</h2>
+          <p>项目按四阶段推进：第一阶段完成 <strong>PRD 与架构设计</strong>，确定前端三栏、Node.js 后端与 Python 辅助服务的三层架构；第二阶段实现<strong>前端</strong>，把逻辑拆分为 9 个独立 JS 模块（状态、配置、存储、Prompt、API、UI 等），用户配置通过 localStorage 持久化；第三阶段实现<strong>后端</strong>，将 API 调用、同步编排、异步任务管理与 Python 桥接拆为独立服务；第四阶段进行<strong>真实 AI 平台联调</strong>，把"失败降级 Mock"改造为"真实错误透传"。</p>
+          <p>开发中最大的挑战是<strong>异步模式的状态管理</strong>：我在后端维护 task_id 缓存、2 秒轮询、120 秒超时的统一任务生命周期，前端只需按状态渲染界面，解耦了轮询逻辑与 UI 状态。</p>
+        </div>
+
+        <!-- 06 技术实现 -->
+        <div class="project-section" id="tech">
+          <span class="num">06 / TECH</span>
+          <h2>技术实现</h2>
+          <p>前后端分离架构，核心模块如下：</p>
+          <div class="tech-list">
+            <span>HTML / CSS / 原生 JS 三栏布局</span>
+            <span>localStorage 配置持久化</span>
+            <span>Node.js · Express 后端</span>
+            <span>统一响应封装 · 限流 · CORS</span>
+            <span>阿里云百炼 API（wan2.6-t2i 同步）</span>
+            <span>Apimart API（gpt-image-2 异步）</span>
+            <span>异步任务轮询 · 120s 超时管理</span>
+            <span>Python FastAPI 辅助服务</span>
+            <span>真实错误透传机制</span>
+            <span>TRAE AI 辅助开发</span>
+          </div>
+          <p>后端模块职责严格分离：aiClient 只负责 API 调用，syncService / asyncService 负责业务编排，pythonBridge 在 Python 服务不可达时自动降级为 Node 本地处理；全部配置外置于 .env 环境变量，API 密钥不在前端暴露。</p>
+        </div>
+
+        <!-- 07 最终成果 -->
+        <div class="project-section" id="result" style="margin-bottom: 30px;">
+          <span class="num">07 / RESULT</span>
+          <h2>最终成果</h2>
+          <p>完成<strong>前后端完整可运行的项目</strong>：同步模式实测 10-20 秒生成真实 AI 图片（目标 P95 ≤ 60 秒），异步任务提交小于 1 秒，Prompt 自动生成小于 10 毫秒；94 个测试用例全部通过，P0 / P1 缺陷为零。</p>
+          <div class="stat-row reveal">
+            <div class="stat">
+              <div><span class="stat-num" data-count-to="94">0</span><span class="stat-unit">个</span></div>
+              <span class="stat-label">测试用例 100% 通过</span>
+            </div>
+            <div class="stat">
+              <div><span class="stat-num">10–20</span><span class="stat-unit">秒</span></div>
+              <span class="stat-label">同步模式实测出图</span>
+            </div>
+            <div class="stat">
+              <div><span class="stat-num">&lt;10</span><span class="stat-unit">ms</span></div>
+              <span class="stat-label">Prompt 自动生成</span>
+            </div>
+          </div>
+          <div class="img-duo">
+            <figure><img src="assets/ai-image/sync-image.png" alt="AI生图网页 - 同步模式生成结果" /><figcaption>同步模式 · 生成结果</figcaption></figure>
+            <figure><img src="assets/ai-image/async-image.png" alt="AI生图网页 - 异步模式生成结果" /><figcaption>异步模式 · 生成结果</figcaption></figure>
+          </div>
+          <p>这个项目让我完整走通了一次<strong>真实 AI 应用从 0 到 1 的落地</strong>：从 PRD 撰写、前后端架构设计到双 AI 平台联调，体现了产品思维、全栈开发能力与 AI 工程化落地能力。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 上 / 下一个项目 -->
+  <div class="container project-nav">
+    <a href="project-survival-log.html">
+      <span class="label">← 上一个项目</span>
+      <span class="name">荒野求生日志</span>
+    </a>
+    <a class="next" href="project-comfyui.html">
+      <span class="label">下一个项目 →</span>
+      <span class="name">ComfyUI电商产品生成</span>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <a class="logo" href="index.html"><span class="logo-mark">HZ</span>HE ZHENG</a>
+      <div class="footer-links">
+        <a href="work.html">WORK</a>
+        <a href="about.html">ABOUT</a>
+        <a href="contact.html">CONTACT</a>
+      </div>
+      <div class="copy">© 2026 HE ZHENG PORTFOLIO</div>
+    </div>
+  </footer>
+
+  <button class="back-top" aria-label="回到顶部">↑</button>
+  <script src="js/main.js"></script>
+</body>
+</html>

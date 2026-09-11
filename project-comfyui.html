@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ComfyUI电商产品生成 — 项目详情 | He Zheng Portfolio</title>
+  <meta name="description" content="ComfyUI电商产品视觉生成系统：基于 Qwen-Image 1.0 与双 LoRA 搭建节点工作流，生成电商级产品主图与大促海报的 AIGC 视觉设计复盘。" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- 导航 -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html"><span class="logo-mark">HZ</span>HE ZHENG</a>
+      <nav class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="work.html" class="active">WORK</a>
+        <a href="about.html">ABOUT</a>
+        <a href="contact.html">CONTACT</a>
+      </nav>
+      <button class="nav-toggle" aria-label="打开菜单"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- 项目标题区 -->
+  <section class="project-hero">
+    <div class="container">
+      <span class="crumb fade-up" style="--d:.1s"><a href="work.html" style="color:inherit;">WORK</a> / PROJECT 03</span>
+      <h1 class="fade-up" style="--d:.2s">ComfyUI电商<span class="text-gradient">产品生成</span></h1>
+      <p class="fade-up" style="color:var(--muted);font-size:15px;letter-spacing:.08em;margin-top:10px;font-family:var(--font-mono);">COMFYUI E-COMMERCE PRODUCT VISUAL</p>
+      <div class="tags fade-up" style="--d:.3s">
+        <span>AIGC 视觉设计</span>
+        <span>ComfyUI 节点工作流</span>
+        <span>Qwen-Image 1.0</span>
+        <span>双 LoRA 风格控制</span>
+      </div>
+      <p class="fade-up" style="--d:.4s;color:var(--muted);max-width:720px;font-size:17px;">
+        基于 ComfyUI 搭建节点式工作流，以 Qwen-Image 1.0 为底模型、双 LoRA 控制节日海报与大促海报风格，批量生成电商级产品主图与大促海报。
+      </p>
+
+      <dl class="project-meta fade-up" style="--d:.5s">
+        <div><dt>我的角色</dt><dd>视觉设计 / AIGC 工作流搭建</dd></div>
+        <div><dt>项目类型</dt><dd>课程作业 · 个人 AIGC 探索</dd></div>
+        <div><dt>使用工具</dt><dd>ComfyUI · Qwen-Image 1.0 · LoRA · GPT · 即梦</dd></div>
+        <div><dt>项目周期</dt><dd>2026 · 课程作业</dd></div>
+      </dl>
+
+      <div class="project-cover cover-split fade-up" style="--d:.6s">
+        <figure class="cover-media">
+          <img src="assets/comfyui/headphone.png" alt="ComfyUI电商产品生成 - 耳机电商主图" />
+          <figcaption>耳机大促海报 · 节日 LoRA 风格输出</figcaption>
+        </figure>
+        <div class="cover-panel">
+          <span class="panel-tag">WORKFLOW SNAPSHOT</span>
+          <h3>生成参数速览</h3>
+          <ul>
+            <li><span>单张耗时</span><strong>20–30 秒</strong></li>
+            <li><span>输出分辨率</span><strong>1130 × 1472</strong></li>
+            <li><span>风格来源</span><strong>双 LoRA 加载器</strong></li>
+            <li><span>覆盖品类</span><strong>美妆 / 数码 / 食品 / 鞋服</strong></li>
+            <li><span>文字修复</span><strong>GPT · 即梦 后期处理</strong></li>
+          </ul>
+          <p>输入商品图与中文 Prompt，经 Qwen-Image 采样、VAE Decode 输出，即成可直接上架的电商视觉素材。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 详情主体 -->
+  <section class="section" style="padding-top: 20px;">
+    <div class="container project-layout">
+
+      <!-- 侧边目录 -->
+      <aside class="toc">
+        <div class="toc-title">目录 / CONTENTS</div>
+        <a href="#background">项目背景</a>
+        <a href="#goal">项目目标</a>
+        <a href="#thinking">设计思路</a>
+        <a href="#flow">功能流程</a>
+        <a href="#process">制作过程</a>
+        <a href="#tech">技术实现</a>
+        <a href="#result">最终成果</a>
+      </aside>
+
+      <div>
+        <!-- 01 项目背景 -->
+        <div class="project-section" id="background">
+          <span class="num">01 / BACKGROUND</span>
+          <h2>项目背景</h2>
+          <p>这是一项<strong>课程作业</strong>方向的个人 AIGC 探索：在 Stable Diffusion 生态里，我想验证"节点工作流 + 文生图底模型 + LoRA 风格控制"能不能替代传统商品摄影，输出可直接用于电商主图与大促海报的视觉素材。</p>
+          <p>项目早于另外两个 portfolio 项目完成，是我在 AIGC 视觉方向上<strong>从模型调用走向工作流编排</strong>的一次练习——重点不在写代码，而在节点编排、参数调试与品类适配。</p>
+        </div>
+
+        <!-- 02 项目目标 -->
+        <div class="project-section" id="goal">
+          <span class="num">02 / GOAL</span>
+          <h2>项目目标</h2>
+          <p>核心是打通<strong>"商品图 + 文字 Prompt → ComfyUI 工作流 → 电商级视觉素材"</strong>的链路，具体拆解为：</p>
+          <p>① 搭建以 Qwen-Image 1.0 为底模型的 ComfyUI 节点工作流；② 通过双 LoRA 分别承载<strong>电商节日中文海报</strong>与<strong>双十一大促电商海报</strong>两套风格；③ 跨品类测试（美妆 / 数码 / 食品 / 鞋服）验证工作流通用性；④ 输出含产品主体、商业摄影感与品牌高级感的高清电商图。</p>
+        </div>
+
+        <!-- 03 设计思路 -->
+        <div class="project-section" id="thinking">
+          <span class="num">03 / THINKING</span>
+          <h2>设计思路</h2>
+          <p>采用 ComfyUI 节点式编排：商品图与文字 Prompt 作为输入，经 Qwen-Image 模型节点采样，再由 VAE Decode 输出高清电商图。本工作流<strong>不使用 ControlNet</strong>，产品结构与背景完全依靠 Qwen-Image 的文生图能力 + 双 LoRA 风格权重控制，让生成结果更贴合"海报 / 主图"的视觉调性。</p>
+          <div class="img-single">
+            <img src="assets/comfyui/ComfyUI电商工作流.png" alt="ComfyUI电商产品生成 - 工作流节点截图" />
+            <figcaption>ComfyUI 工作流 · 双 LoRA 加载器分别承载节日海报与大促海报风格</figcaption>
+          </div>
+        </div>
+
+        <!-- 04 功能流程 -->
+        <div class="project-section" id="flow">
+          <span class="num">04 / FLOW</span>
+          <h2>功能流程</h2>
+          <p>生成链路按四节点串行，最终落到 VAE 解码与高清输出：</p>
+          <div class="flow-steps">
+            <div class="flow-step"><span class="step-num">STEP 01</span><h4>输入节点</h4><p>商品原图 + 文本 Prompt + 尺寸参数</p></div>
+            <div class="flow-step"><span class="step-num">STEP 02</span><h4>模型节点</h4><p>Qwen-Image 1.0 + CLIP + 双 LoRA 加载</p></div>
+            <div class="flow-step"><span class="step-num">STEP 03</span><h4>采样节点</h4><p>KSampler 负责图像生成与参数调整</p></div>
+            <div class="flow-step"><span class="step-num">STEP 04</span><h4>输出节点</h4><p>VAE Decode → 高清放大 → 电商图</p></div>
+          </div>
+          <div class="img-duo">
+            <figure><img src="assets/comfyui/sneaker.png" alt="ComfyUI电商产品生成 - 运动鞋主图" /><figcaption>鞋服品类 · 运动鞋电商主图</figcaption></figure>
+            <figure><img src="assets/comfyui/coffee.png" alt="ComfyUI电商产品生成 - 咖啡主图" /><figcaption>食品品类 · 咖啡电商主图</figcaption></figure>
+          </div>
+        </div>
+
+        <!-- 05 制作过程 -->
+        <div class="project-section" id="process">
+          <span class="num">05 / PROCESS</span>
+          <h2>制作过程</h2>
+          <p>先搭最小工作流跑通 Qwen-Image 1.0 单图生成，确认 CLIP 与模型类型配置无误后，再并联<strong>双 LoRA 加载器</strong>：左侧加载 Qwen-电商节日中文海报 v1.0，右侧加载 Qwen-双十一大促电商海报 / 千问中文海报页面 v1.0，分别对齐两类海报的视觉调性，逐步调参覆盖美妆、数码、食品、鞋服多品类。</p>
+          <p>中途最大的坑是<strong>文字扭曲</strong>——Qwen-Image 直出时，海报上的中文标题与促销文案会出现笔画变形、字符粘连。我的处理方式是<strong>不硬刚模型</strong>：把生成图导入 GPT、即梦等外部软件做文字修复与版式重排，再回贴到工作流输出图上，避免反复重采样浪费时间。</p>
+        </div>
+
+        <!-- 06 技术实现 -->
+        <div class="project-section" id="tech">
+          <span class="num">06 / TECH</span>
+          <h2>技术实现</h2>
+          <p>ComfyUI 节点工作流，核心模块与配置如下：</p>
+          <div class="tech-list">
+            <span>底模型 · Qwen-Image 1.0</span>
+            <span>CLIP · qwen_2.5_vl_7b_fp8_scaled.safetensors</span>
+            <span>模型类型 · qwen_image</span>
+            <span>左 LoRA · Qwen-电商节日中文海报 v1.0</span>
+            <span>右 LoRA · Qwen-双十一大促电商海报 v1.0</span>
+            <span>采样器 · KSampler</span>
+            <span>解码 · VAE Decode + 高清放大</span>
+            <span>不使用 ControlNet</span>
+            <span>外部文字修复 · GPT / 即梦</span>
+          </div>
+          <p>双 LoRA 加载器并行接入模型节点，分别承担"电商节日中文海报"与"双十一大促电商海报"两套风格权重；采样与解码参数随品类微调，美妆类偏软光与玻璃质感，数码类偏霓虹背景与商业摄影感。</p>
+        </div>
+
+        <!-- 07 最终成果 -->
+        <div class="project-section" id="result" style="margin-bottom: 30px;">
+          <span class="num">07 / RESULT</span>
+          <h2>最终成果</h2>
+          <p>工作流稳定可复用，单张图片生成耗时约 <strong>20–30 秒</strong>，输出分辨率 <strong>1130 × 1472</strong>；跨美妆 / 数码 / 食品 / 鞋服多品类产出电商主图与大促海报样图，验证了 Qwen-Image + 双 LoRA 在电商视觉生成上的可行性。</p>
+          <div class="stat-row reveal">
+            <div class="stat">
+              <div><span class="stat-num">20–30</span><span class="stat-unit">秒</span></div>
+              <span class="stat-label">单张图片生成耗时</span>
+            </div>
+            <div class="stat">
+              <div><span class="stat-num">1130×1472</span></div>
+              <span class="stat-label">高清输出分辨率</span>
+            </div>
+            <div class="stat">
+              <div><span class="stat-num" data-count-to="4">0</span><span class="stat-unit">大品类</span></div>
+              <span class="stat-label">美妆 / 数码 / 食品 / 鞋服</span>
+            </div>
+          </div>
+          <div class="img-duo">
+            <figure><img src="assets/comfyui/promo-1212.png" alt="ComfyUI电商产品生成 - 双12大促海报" /><figcaption>双 12 大促海报样图</figcaption></figure>
+            <figure><img src="assets/comfyui/promo-168.png" alt="ComfyUI电商产品生成 - 168大促海报" /><figcaption>168 大促海报样图</figcaption></figure>
+          </div>
+          <div class="img-duo">
+            <figure><img src="assets/comfyui/cream.png" alt="ComfyUI电商产品生成 - 面霜主图" /><figcaption>美妆品类 · 面霜电商主图</figcaption></figure>
+            <figure><img src="assets/comfyui/serum.png" alt="ComfyUI电商产品生成 - 精华主图" /><figcaption>美妆品类 · 精华电商主图</figcaption></figure>
+          </div>
+          <p>这个项目让我从"调 API"走到"<strong>编排工作流</strong>"：在 Qwen-Image 文生图能力之上，用节点思维组织模型、LoRA、采样与解码，并学会在模型短板处（文字渲染）借助外部工具协作完成最终交付，是 AIGC 视觉工程化的一次完整练手。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 上 / 下一个项目 -->
+  <div class="container project-nav">
+    <a href="project-ai-image.html">
+      <span class="label">← 上一个项目</span>
+      <span class="name">AI生图网页</span>
+    </a>
+    <a class="next" href="about.html">
+      <span class="label">了解我更多 →</span>
+      <span class="name">关于我 / ABOUT</span>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <a class="logo" href="index.html"><span class="logo-mark">HZ</span>HE ZHENG</a>
+      <div class="footer-links">
+        <a href="work.html">WORK</a>
+        <a href="about.html">ABOUT</a>
+        <a href="contact.html">CONTACT</a>
+      </div>
+      <div class="copy">© 2026 HE ZHENG PORTFOLIO</div>
+    </div>
+  </footer>
+
+  <button class="back-top" aria-label="回到顶部">↑</button>
+  <script src="js/main.js"></script>
+</body>
+</html>

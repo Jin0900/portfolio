@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>荒野求生日志 — 项目详情 | He Zheng Portfolio</title>
+  <meta name="description" content="《荒野求生日志 Wilderness Survival Log》网页生存选择类小游戏：产品设计、UI设计、网页开发与交互逻辑的完整复盘。" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- 导航 -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html"><span class="logo-mark">HZ</span>HE ZHENG</a>
+      <nav class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="work.html" class="active">WORK</a>
+        <a href="about.html">ABOUT</a>
+        <a href="contact.html">CONTACT</a>
+      </nav>
+      <button class="nav-toggle" aria-label="打开菜单"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- 项目标题区 -->
+  <section class="project-hero">
+    <div class="container">
+      <span class="crumb fade-up" style="--d:.1s"><a href="work.html" style="color:inherit;">WORK</a> / PROJECT 01</span>
+      <h1 class="fade-up" style="--d:.2s">荒野求生<span class="text-gradient">日志</span></h1>
+      <p class="fade-up" style="color:var(--muted);font-size:15px;letter-spacing:.08em;margin-top:10px;font-family:var(--font-mono);" >WILDERNESS SURVIVAL LOG</p>
+      <div class="tags fade-up" style="--d:.3s">
+        <span>网页互动游戏</span>
+        <span>数字产品设计</span>
+        <span>交互逻辑</span>
+        <span>HTML / CSS / JS</span>
+      </div>
+      <p class="fade-up" style="--d:.4s;color:var(--muted);max-width:720px;font-size:17px;">
+        《荒野求生日志》是一款网页生存选择类小游戏，通过事件选择、状态变化和时间推进机制，让用户体验模拟生存过程。
+      </p>
+
+      <dl class="project-meta fade-up" style="--d:.5s">
+        <div><dt>我的角色</dt><dd>玩法 / 交互 / UI / 前端实现</dd></div>
+        <div><dt>项目类型</dt><dd>网页互动生存游戏</dd></div>
+        <div><dt>使用工具</dt><dd>HTML · CSS · JS · TRAE</dd></div>
+        <div><dt>项目周期</dt><dd>2026 · 课程作品</dd></div>
+      </dl>
+
+      <div class="project-cover fade-up" style="--d:.6s">
+        <img src="assets/survival/cover.png" alt="荒野求生日志 - 项目封面" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 详情主体 -->
+  <section class="section" style="padding-top: 20px;">
+    <div class="container project-layout">
+
+      <!-- 侧边目录 -->
+      <aside class="toc">
+        <div class="toc-title">目录 / CONTENTS</div>
+        <a href="#background">项目背景</a>
+        <a href="#goal">项目目标</a>
+        <a href="#thinking">设计思路</a>
+        <a href="#flow">功能流程</a>
+        <a href="#process">制作过程</a>
+        <a href="#tech">技术实现</a>
+        <a href="#result">最终成果</a>
+      </aside>
+
+      <div>
+        <!-- 01 项目背景 -->
+        <div class="project-section" id="background">
+          <span class="num">01 / BACKGROUND</span>
+          <h2>项目背景</h2>
+          <p>在 AI 辅助开发逐渐普及的环境下，我希望验证一个完整的产品闭环：<strong>不依赖游戏引擎，仅用网页三件套完成一款有叙事感的互动小游戏</strong>。生存题材天然具备"选择—后果"的张力，适合作为事件系统与状态机制的载体。</p>
+          <p>项目同时是我数字产品设计方向的一次练习：从玩法规则、界面布局到交互反馈，全部由自己定义并实现。</p>
+        </div>
+
+        <!-- 02 项目目标 -->
+        <div class="project-section" id="goal">
+          <span class="num">02 / GOAL</span>
+          <h2>项目目标</h2>
+          <p>通过游戏化设计和交互体验，将<strong>网页开发、用户体验设计和故事叙事</strong>结合，具体拆解为：</p>
+          <p>① 搭建一套可扩展的事件选择系统；② 让生命值、体力值、感染值三项状态真实影响游戏走向；③ 用时间推进制造生存紧迫感；④ 提供清晰的结局反馈，形成完整的游玩循环。</p>
+        </div>
+
+        <!-- 03 设计思路 -->
+        <div class="project-section" id="thinking">
+          <span class="num">03 / THINKING</span>
+          <h2>设计思路</h2>
+          <p>界面采用<strong>日志（Log）</strong>作为核心隐喻：玩家的每一天生存都被记录成一条日志，事件以卡片形式呈现，选择即翻页。深色底 + 高对比文字营造荒野夜晚的紧张氛围。</p>
+          <div class="img-single">
+            <img src="assets/survival/gameplay.png" alt="荒野求生日志 - 游戏主界面" />
+            <figcaption>游戏主界面 · 事件与状态面板</figcaption>
+          </div>
+          <p>状态栏常驻顶部，任何一次选择都会即时反映数值变化——<strong>让玩家"看见"每一个决定的代价</strong>，这是整个体验设计的核心。</p>
+        </div>
+
+        <!-- 04 功能流程 -->
+        <div class="project-section" id="flow">
+          <span class="num">04 / FLOW</span>
+          <h2>功能流程</h2>
+          <p>游戏循环由四个环节构成，事件驱动、状态闭环：</p>
+          <div class="flow-steps">
+            <div class="flow-step"><span class="step-num">STEP 01</span><h4>事件触发</h4><p>按天数与权重抽取随机事件</p></div>
+            <div class="flow-step"><span class="step-num">STEP 02</span><h4>玩家选择</h4><p>在 2-3 个选项中做出决定</p></div>
+            <div class="flow-step"><span class="step-num">STEP 03</span><h4>状态结算</h4><p>生命 / 体力 / 感染值变化</p></div>
+            <div class="flow-step"><span class="step-num">STEP 04</span><h4>时间推进</h4><p>进入下一天或触发结局</p></div>
+          </div>
+          <div class="img-duo">
+            <figure><img src="assets/survival/interaction_01.png" alt="交互细节 - 事件选择" /><figcaption>交互细节 · 事件选择</figcaption></figure>
+            <figure><img src="assets/survival/interaction_02.png" alt="交互细节 - 状态反馈" /><figcaption>交互细节 · 状态反馈</figcaption></figure>
+          </div>
+        </div>
+
+        <!-- 05 制作过程 -->
+        <div class="project-section" id="process">
+          <span class="num">05 / PROCESS</span>
+          <h2>制作过程</h2>
+          <p>第一阶段完成<strong>玩法设计</strong>：编写事件池、状态规则与结局判定表，先用文档把数值曲线跑通；第二阶段做<strong>页面设计</strong>：确定日志式信息架构与深色视觉方案；第三阶段进入<strong>前端实现</strong>：以 TRAE 辅助开发完成事件系统、渲染逻辑与过渡动画；最后进行多轮自测，平衡数值难度。</p>
+          <p>开发中遇到的最大挑战是事件与状态的耦合：我通过把"事件 → 状态变化 → 文案反馈"抽象为统一的数据结构，让新增事件只需配置一条记录。</p>
+        </div>
+
+        <!-- 06 技术实现 -->
+        <div class="project-section" id="tech">
+          <span class="num">06 / TECH</span>
+          <h2>技术实现</h2>
+          <p>纯前端实现，无框架依赖，核心模块如下：</p>
+          <div class="tech-list">
+            <span>HTML5 语义结构</span>
+            <span>CSS3 状态动画</span>
+            <span>JavaScript 事件系统</span>
+            <span>状态机管理</span>
+            <span>随机事件池</span>
+            <span>结局判定逻辑</span>
+            <span>TRAE AI 辅助开发</span>
+          </div>
+          <p>事件数据与渲染分离：事件以对象数组配置，渲染层只负责把状态映射到界面，保证了代码的可扩展性。</p>
+        </div>
+
+        <!-- 07 最终成果 -->
+        <div class="project-section" id="result" style="margin-bottom: 30px;">
+          <span class="num">07 / RESULT</span>
+          <h2>最终成果</h2>
+          <p>完成<strong>可运行的网页 Demo</strong>：实现事件系统、状态变化、选择反馈和结局展示的完整闭环。玩家平均单局 5-8 分钟，存在多结局差异，验证了玩法设计目标。</p>
+          <div class="img-single">
+            <img src="assets/survival/result.png" alt="荒野求生日志 - 结局界面" />
+            <figcaption>结局展示 · 生存结算</figcaption>
+          </div>
+          <p>这个项目完整体现了我的<strong>数字产品设计能力、用户交互设计能力与创意项目实现能力</strong>——从一份玩法构想到一个可以被他人游玩的作品。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 上 / 下一个项目 -->
+  <div class="container project-nav">
+    <a href="work.html">
+      <span class="label">← 上一个项目</span>
+      <span class="name">返回全部作品</span>
+    </a>
+    <a class="next" href="project-ai-image.html">
+      <span class="label">下一个项目 →</span>
+      <span class="name">AI生图网页</span>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <a class="logo" href="index.html"><span class="logo-mark">HZ</span>HE ZHENG</a>
+      <div class="footer-links">
+        <a href="work.html">WORK</a>
+        <a href="about.html">ABOUT</a>
+        <a href="contact.html">CONTACT</a>
+      </div>
+      <div class="copy">© 2026 HE ZHENG PORTFOLIO</div>
+    </div>
+  </footer>
+
+  <button class="back-top" aria-label="回到顶部">↑</button>
+  <script src="js/main.js"></script>
+</body>
+</html>
